@@ -48,13 +48,13 @@ nav button:hover{
 }
 .windows{
     display: grid;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: repeat(auto-fill, 200px);
     border-radius: 8px;
     justify-content: center;
+    overflow: hidden;
 }
 .window-1{
-    border-radius: 8px 0 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,25 +62,21 @@ nav button:hover{
     /* background: url(https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374); */
 }
 #video{
-    height: fit-content;
     object-fit: cover;
 }
 .window-2{
     background: url(https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387);
 }
 .window-3{
-    border-radius: 0 8px 0 0;
     background: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870);
 }
 .window-4{
-    border-radius: 0 0 0 8px;
     background: url(https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387);
 }
 .window-5{
     background: url(https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871);
 }
 .window-6{
-    border-radius: 0 0 8px 0;
     background: url(https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470);
 }
 .window-1, .window-2, .window-3, .window-4, .window-5, .window-6{
@@ -150,19 +146,29 @@ nav button:hover{
     background: red;
 }
 .chat-box{
+    opacity: 0;
     position: absolute;
     right: 0;
     width: 375px;
     height: 100%;
     background: white;
     box-shadow: 0 0 16px rgba(18, 18, 18, 0.4);
-    transition: 1s ease-in-out;
+    transition: .3s ease-in-out;
     transform: translateX(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .active{
+    opacity: 1;
     transform: translateX(0%);
 }
 
+@media (max-width:  1087px) {
+    .windows{
+        grid-template-rows: repeat(auto-fill, 150px);
+    }
+}
 @media (max-width: 928px) {
     .main{
         grid-template-columns: 100%;
@@ -170,6 +176,7 @@ nav button:hover{
     }
     .tools{
         position: relative;
+        bottom: 20px;
     }
     nav{
         z-index: 2;
@@ -187,29 +194,28 @@ nav button:hover{
         transform: translateY(0%);
     }
     .middle-section{
-        padding: 20px;
-    }
-    .windows{
-        grid-template-columns: repeat(3, 200px);
+        padding: 10px 20px;
     }
 }
 @media (max-width:  770px) {
     .windows{
-        grid-template-columns: repeat(3, 200px);
-        grid-template-rows: repeat(2, 50%);
+        grid-template-columns: repeat(auto-fill, 200px);
+        grid-template-rows: repeat(auto-fill, 200px);
     }
 }
 @media (max-width: 630px) {
     .windows{
-        overflow-y: scroll;
-        grid-template-columns: repeat(2, 50%);
-        grid-template-rows: repeat(6, 50%);
+        grid-template-columns: repeat(auto-fill, 200px);
+        grid-template-rows: repeat(auto-fill, 150px);
     }
 }
 @media (max-width:  440px) {
+    #video{
+        object-fit: contain;
+    }
     .windows{
-        grid-template-columns: 250px;
-        grid-template-rows: repeat(6, 50%);
+        grid-template-columns: repeat(auto-fill, 120px);
+        grid-template-rows: repeat(auto-fill, 100px);
     }
     .tools{
         width: 100%;
