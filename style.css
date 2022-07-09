@@ -222,6 +222,7 @@ nav button:hover{
         grid-template-columns: repeat(3, 60px) 70px;
         align-items: center;
         justify-content: center;
+        bottom: 60px;
     }
     .tools button{
         width: 40px;
