@@ -27,33 +27,39 @@
                         <source src="u1.mp4" type="video/mp4">
                         unsupported filetype
                     </video>
-                    <div class="name">Aaron, Hank</div>
+                    <div class="name">Aaron, Hank <i class="fa-solid fa-microphone-slash"></i> <i class="fa-solid fa-video"></i></div>
                 </div>
                 <div class="window-2">
-                    <div class="name">Guitry, Sacha</div>
+                    <div class="name">Guitry, Sacha <i class="fa-solid fa-microphone-slash"></i> <i class="fa-solid fa-video"></i></div>
                 </div>
                 <!-- <div class="window-3">
                     <div class="name">James, Kevin</div>
                 </div> -->
                 <div class="window-4">
-                    <div class="name">Berle, Milton</div>
+                    <div class="name">Berle, Milton <i class="fa-solid fa-microphone-slash"></i> <i class="fa-solid fa-video"></i></div>
                 </div>
                 <div class="window-5">
-                    <div class="name">Polański, Roman</div>
+                    <div class="name">Polański, Roman <i class="fa-solid fa-microphone-slash"></i> <i class="fa-solid fa-video"></i></div>
                 </div>
                 <div class="window-6">
-                    <div class="name">Roux, Joseph</div>
+                    <div class="name">Roux, Joseph <i class="fa-solid fa-microphone-slash"></i> <i class="fa-solid fa-video"></i></div>
                 </div>
             </div>
             <div class="tools">
-                <button class="mic"><i class="fa-solid fa-microphone"></i></button>
-                <button class="camera"><i class="fa-solid fa-video"></i></button>
+                <button class="mic" onclick="micIconChange(this)" title="mute"><i class="fa-solid fa-microphone"></i></button>
+                <button class="camera" onclick="camIconChange(this)" title="off cam"><i class="fa-solid fa-video"></i></button>
                 <button class="maximize"><i class="fa-solid fa-maximize"></i></button>
                 <button class="hangup"> &nbsp;<i class="fa-solid fa-right-from-bracket"></i></button>
             </div>
         </div>
         <div class="chat-box">
-            <h1>Chat Box</h1>
+            <h1>Chats</h1>
+            <div class="tabs">
+                <button class="message-active">Everyone</button>
+                <button class="">Personal</button>
+            </div>
+            <div class="message-box-everyone">Everyone chatbox</div>
+            <div class="message-box-everyone">Personal chatbox</div>
         </div>
     </div>
     <script src="script.js"></script>

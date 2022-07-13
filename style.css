@@ -138,9 +138,11 @@ nav button:hover{
     border-radius: 8px;
 }
 .tools button:hover{
-    background-color: #121212;
-    color: white;
     cursor: pointer;
+}
+.tool-active{
+    background-color: #121212 !important;
+    color: white !important;
 }
 .tools .hangup:hover{
     height: 50px;
@@ -158,20 +160,66 @@ nav button:hover{
     box-shadow: 0 0 16px rgba(18, 18, 18, 0.4);
     transition: .3s ease-in-out;
     transform: translateX(100%);
+    padding: 20px;
+}
+.chat-box h1{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.tabs{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    border: 1px solid #12121257;
+    border-radius: 24px;
+    margin: 0 8px;
+}
+.tabs button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 24px;
+    height: 30px;
+    background: transparent;
+}
+.message-active{
+    color: rgba(254, 29, 38);
+    background: rgba(254, 29, 36, 0.158) !important;
+    font-weight: 600;
+
+}
+.active{
+    position: relative;
+    opacity: 1;
+    transform: translateX(0%);
+}
+.main-active{
+    grid-template-columns: 8% auto auto;
+}
+
+.message-box-everyone{
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.active{
-    opacity: 1;
-    transform: translateX(0%);
-}
+
+
+
+
 
 @media (max-width:  1095px) {
     .window-1, .window-2, .window-3, .window-4, .window-5, .window-6{
         width: 250px;
         height: 150px;
     }
+}
+.windows-active {
+    width: 183px;
+    height: 128px;
 }
 @media (max-width: 930px) {
     .main{
@@ -191,18 +239,24 @@ nav button:hover{
         width: 100%;
         transform: translateX(0%);
         transform: translateY(100%);
+        padding-top: 70px;
     }
     .active{
+        position: absolute;
         transform: translateX(100%);
         transform: translateY(0%);
     }
     .middle-section{
         padding: 10px 20px;
     }
+    .main-active{
+        grid-template-columns: 100%;
+    }
 }
 @media (max-width:  543px) {
     nav{
         width: 90%;
+        height: 40%;
     }
     .window-1, .window-2, .window-3, .window-4, .window-5, .window-6{
         width: 150px;
